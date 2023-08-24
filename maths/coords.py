@@ -11,8 +11,8 @@ def spherical_to_cartesian(phi, theta, r):
 def latlon_to_spherical(latitude, longitude):
     """ Convert lat, lon to spherical coords.
     """
-    phi = ((latitude - 90)/180.0) * np.pi
-    theta = (longitude/360.0) * np.pi * 2
+    phi = ((longitude - 90)/180.0) * np.pi
+    theta = (latitude/360.0) * np.pi * 2
     return phi, theta
 
 def latlon_to_cartesian(latitude, longitude, radius):
